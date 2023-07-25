@@ -1,0 +1,175 @@
+.wrapper {
+    display: flex;
+    padding: 30px;
+    border-radius: 2rem;
+    background-color: rgb(52, 73, 102);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+    background-color: rgb(180, 205, 237);
+    padding: 40px 20px;
+    color: rgb(241, 115, 0);
+    font-size: xx-large;
+    width: 324px;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.1);
+}
+
+span {
+    padding: 0.5rem;
+    opacity: 0.7;
+    font-size: large;
+}
+
+.buttonBox {
+    border-radius: 1rem;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.row {
+    gap: 1rem;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+    border: solid 2px;
+    border-radius: 15px;
+    color: rgb(241, 115, 0);
+    border-color: rgb(250, 199, 72);
+    background-color: rgb(250, 199, 72);
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.1);
+}
+
+.cero {
+    width: 155px;
+}
+
+.cero-row {
+    display: flex;
+}
+
+.button:hover {
+    color: rgb(241, 115, 0);
+    background-color: transparent;
+    transition: 200ms;
+    border-color: rgb(241, 115, 0);
+}
+
+.equal {
+    width: 324px;
+}
+
+.ops {
+    color: rgb(241, 36, 0);
+    border-color: rgb(250, 158, 72);
+    background-color: rgb(250, 158, 72);
+}
+
+.ops:hover {
+    color: rgb(241, 36, 0);
+    background-color: transparent;
+    transition: 200ms;
+    border-color: rgb(241, 36, 0);
+}
+
+@media screen and (max-width: 450px),
+        screen and (max-height: 800px){
+
+    .wrapper {
+        padding: 30px;
+        transition: linear 100ms;
+        gap: 20px;
+    }
+
+    .screen {
+        padding: 40px 20px;
+        width: 250px;
+        height: 30px;
+        font-size: x-large;
+        transition: linear 100ms;
+    }
+
+    .buttonBox {
+        width: auto;
+        transition: linear 100ms;
+    }
+
+    .button {
+        height: 50px;
+        width: 50px;
+        font-size: x-large;
+        transition: linear 100ms;
+        border-radius: 10px;
+    }
+    .cero {
+        width: 120px;
+        transition: ease-in-out 100ms;
+    }
+
+    .equal {
+        width: 250px;
+        transition: ease-in-out 100ms;
+    }
+}
+
+@media screen and (max-width: 320px),
+        screen and (max-height: 550px){
+
+    .wrapper {
+        padding: 20px;
+        transition: linear 100ms;
+        gap: 15px;
+    }
+
+    .screen {
+        padding: 40px 20px;
+        width: 208px;
+        height: 30px;
+        font-size: larger;
+        transition: linear 100ms;
+        border-radius: 10px;
+    }
+
+    .buttonBox {
+        width: auto;
+        transition: linear 100ms;
+    }
+
+    .button {
+        height: 40px;
+        width: 40px;
+        font-size: larger;
+        transition: linear 100ms;
+    }
+    .cero {
+        width: 97px;
+        transition: ease-in-out 100ms;
+    }
+
+    .equal {
+        width: 208px;
+        transition: ease-in-out 100ms;
+    }
+}
