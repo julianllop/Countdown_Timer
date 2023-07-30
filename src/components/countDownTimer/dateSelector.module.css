@@ -128,6 +128,11 @@ body {
         font-size: xx-large;
     }
 
+    .timeLeft {
+        color: rgb(241, 115, 0);
+        font-size: large;
+    }
+
     .dateSelector {
         padding: 20px;
         display: flex;
@@ -172,6 +177,11 @@ body {
         font-size: xx-large;
     }
     .title {
+        color: rgb(241, 115, 0);
+        font-size: xx-large;
+    }
+
+    .timeLeft {
         color: rgb(241, 115, 0);
         font-size: larger;
     }

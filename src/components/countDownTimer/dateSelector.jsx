@@ -124,7 +124,7 @@ const DateSelector = () => {
                 ) : (
                     <div className={style.calendarCont}>
                         <h1 className={style.title}>
-                            Do you want to choose a new day ?
+                            Change date?
                         </h1>
 
                         <button
