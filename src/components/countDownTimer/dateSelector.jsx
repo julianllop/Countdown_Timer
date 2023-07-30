@@ -88,64 +88,66 @@ const DateSelector = () => {
 
     return (
         <div className={style.container}>
-            {submitted && timer <= 0 ? (
-                <div className={style.calendarCont}>
-                    <Congrats />
-                    <button
-                        type="submit"
-                        onClick={handleNewDate}
-                        className={style.dateButton}
-                    >
-                        Select New Date
-                    </button>
-                </div>
-            ) : !running ? (
-                <div className={style.calendarCont}>
-                    <h1 className={style.title}>
-                        Select The Day You're Looking Forward
-                    </h1>
-
-                    <form onSubmit={handleSubmit} className={style.form}>
-                        <input
-                            placeholder="dd/mm/yyyy"
-                            type="datetime-local"
-                            name="date"
-                            value={date}
-                            required
-                            onChange={handleInputChange}
-                            className={style.dateInput}
-                        />
-                        <button type="submit" className={style.dateButton}>
+            <div className={style.dateSelector}>
+                {submitted && timer <= 0 ? (
+                    <div className={style.calendarCont}>
+                        <Congrats />
+                        <button
+                            type="submit"
+                            onClick={handleNewDate}
+                            className={style.dateButton}
+                        >
                             Select New Date
                         </button>
-                    </form>
-                </div>
-            ) : (
-                <div className={style.calendarCont}>
-                    <h1 className={style.title}>
-                        Do you want to choose a new day ?
-                    </h1>
+                    </div>
+                ) : !running ? (
+                    <div className={style.calendarCont}>
+                        <h1 className={style.title1}>
+                            Countdown Timer
+                        </h1>
 
-                    <button
-                        type="submit"
-                        onClick={handleNewDate}
-                        className={style.dateButton}
-                    >
-                        Select New Date
-                    </button>
-                    <h2 className={style.title}>
-                        Time left to {specialDateDay} at {specialDateHour}
-                    </h2>
-                </div>
-            )}
+                        <form onSubmit={handleSubmit} className={style.form}>
+                            <input
+                                placeholder="dd/mm/yyyy"
+                                type="datetime-local"
+                                name="date"
+                                value={date}
+                                required
+                                onChange={handleInputChange}
+                                className={style.dateInput}
+                            />
+                            <button type="submit" className={style.dateButton}>
+                                Start
+                            </button>
+                        </form>
+                    </div>
+                ) : (
+                    <div className={style.calendarCont}>
+                        <h1 className={style.title}>
+                            Do you want to choose a new day ?
+                        </h1>
 
-            <CountDown
-                date={date}
-                days={days}
-                hours={hours}
-                minutes={minutes}
-                seconds={seconds}
-            />
+                        <button
+                            type="submit"
+                            onClick={handleNewDate}
+                            className={style.dateButton}
+                        >
+                            Select New Date
+                        </button>
+                        <h2 className={style.timeLeft}>
+                            Time left to {specialDateDay} at {specialDateHour}
+                        </h2>
+                    </div>
+                )}
+
+                <CountDown
+                    date={date}
+                    days={days}
+                    hours={hours}
+                    minutes={minutes}
+                    seconds={seconds}
+                />
+            </div>
         </div>
     );
 };
